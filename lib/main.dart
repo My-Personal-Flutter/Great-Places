@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:great_places/providers/great_places_provider.dart';
+import 'package:great_places/screens/add_place_screen.dart';
 import 'package:great_places/screens/places_list_screen.dart';
 import 'package:provider/provider.dart';
 
@@ -22,9 +23,9 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Great Places',
         theme: ThemeData(
-          primarySwatch: Colors.indigo,
+          primarySwatch: Colors.lightBlue,
           colorScheme: ColorScheme.fromSwatch(
-            primarySwatch: Colors.indigo,
+            primarySwatch: Colors.lightBlue,
           ).copyWith(
             secondary: Colors.amber,
             //onSecondary: Colors.black,
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
         ),
         initialRoute: '/',
         routes: {
-          '/': (ctx) => PlacesListScreen(),
+          '/': (ctx) => const PlacesListScreen(),
+          AddPlaceScreen.routName: (ctx) => const AddPlaceScreen(),
         },
       ),
     );

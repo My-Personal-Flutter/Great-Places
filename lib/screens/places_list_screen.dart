@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:great_places/screens/add_place_screen.dart';
 
 class PlacesListScreen extends StatelessWidget {
   const PlacesListScreen({Key? key}) : super(key: key);
@@ -11,7 +12,9 @@ class PlacesListScreen extends StatelessWidget {
         centerTitle: false,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pushNamed(AddPlaceScreen.routName);
+            },
             icon: const Icon(
               Icons.add,
             ),
