@@ -28,6 +28,31 @@
 	<string>Needed for accessing camera</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Needed for accessing microphone</string>
+
+<!-- location -->
+  <key>EnableBackgroundLocationUpdates</key>
+  <true/>
+  <key>NSLocationWhenInUseUsageDescription</key>
+  <string>This app needs access to location when open.</string>
+  <key>NSLocationAlwaysUsageDescription</key>
+  <string>This app needs access to location when in the background.</string>
+  <key>NSLocationAlwaysAndWhenInUsageDescription</key>
+  <string>Always And In Use Permission</string>
+  <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+  <string>This app needs access to location when open and in the background.</string>
+  
+
+	<!-- <key>NSLocationWhenInUseUsageDescription</key>
+	<string>Needed for accessing location</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Needed for accessing location but depricated</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Needed for accessing location in background</string>
+	<key>UIBackgroundModes</key>
+	<string>location</string>
+	<key>EnableBackgroundLocationUpdates</key> 
+	<true/> -->
+
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
