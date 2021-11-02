@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.lightBlue,
           ).copyWith(
             secondary: Colors.amber,
-            //onSecondary: Colors.black,
+            onSecondary: Colors.black,
           ),
         ),
         initialRoute: '/',
