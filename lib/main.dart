@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
         title: 'Great Places',
         theme: ThemeData(
           primarySwatch: Colors.lightBlue,
+          canvasColor: Colors.grey[100],
           colorScheme: ColorScheme.fromSwatch(
             primarySwatch: Colors.lightBlue,
           ).copyWith(

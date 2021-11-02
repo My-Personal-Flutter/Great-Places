@@ -23,28 +23,42 @@ class PlacesListScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Consumer<GreatPlacesProvider>(
-        builder: (ctx, greatPlacesData, ch) => greatPlacesData.items.isEmpty
-            ? ch!
-            : Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: ListView.builder(
-                  itemCount: greatPlacesData.items.length,
-                  itemBuilder: (ct, index) => Card(
-                    child: ListTile(
-                      leading: CircleAvatar(
-                        backgroundImage: FileImage(
-                          greatPlacesData.items[index].image!,
+      body: FutureBuilder(
+        future: Provider.of<GreatPlacesProvider>(context, listen: false)
+            .fetchAndSetPlaces(),
+        builder: (ctx, snapshotData) => snapshotData.connectionState ==
+                ConnectionState.waiting
+            ? const Center(
+                child: CircularProgressIndicator(),
+              )
+            : Consumer<GreatPlacesProvider>(
+                builder: (ctx, greatPlacesData, ch) => greatPlacesData
+                        .items.isEmpty
+                    ? ch!
+                    : Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: ListView.builder(
+                          itemCount: greatPlacesData.items.length,
+                          itemBuilder: (ct, index) => Card(
+                            elevation: 3,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: ListTile(
+                              leading: CircleAvatar(
+                                backgroundImage: FileImage(
+                                  greatPlacesData.items[index].image!,
+                                ),
+                              ),
+                              title: Text(greatPlacesData.items[index].title!),
+                              onTap: () {},
+                            ),
+                          ),
                         ),
                       ),
-                      title: Text(greatPlacesData.items[index].title!),
-                      onTap: () {},
-                    ),
-                  ),
-                ),
+                child: const Center(
+                    child: Text("Got no places yet, start adding some!")),
               ),
-        child:
-            const Center(child: Text("Got no places yet, start adding some!")),
       ),
     );
   }
