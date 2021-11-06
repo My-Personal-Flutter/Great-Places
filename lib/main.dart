@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-        title: 'Great Places',
+        title: 'Great Places by me',
         theme: ThemeData(
           primarySwatch: Colors.lightBlue,
           canvasColor: Colors.grey[100],
