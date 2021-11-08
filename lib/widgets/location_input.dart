@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:great_places/helpers/location_helper.dart';
 import 'package:location/location.dart';
@@ -16,6 +18,7 @@ class _LocationInputState extends State<LocationInput> {
     final locData = await Location().getLocation();
     print(locData.latitude);
     print(locData.longitude);
+    // not used because the Static Map Api is not working PAID
     final staticMapImageUrl = LocationHelper.generateLocationPreviewImage(
       latitude: locData.latitude,
       longitude: locData.longitude,
@@ -44,11 +47,17 @@ class _LocationInputState extends State<LocationInput> {
                 )
               : ClipRRect(
                   borderRadius: BorderRadius.circular(10.0),
-                  child: Image.network(
-                    _previewImage!,
+                  child: Image.asset(
+                    "assets/images/my_location.png",
                     fit: BoxFit.cover,
                     width: double.infinity,
                   ),
+                  // not used because the Static Map Api is not working
+                  // Image.network(
+                  //   _previewImage!,
+                  //   fit: BoxFit.cover,
+                  //   width: double.infinity,
+                  // ),
                 ),
         ),
         Row(

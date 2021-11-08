@@ -30,7 +30,7 @@ class _ImageInputState extends State<ImageInput> {
       final fileName = path.basename(imageFile.path);
       final savedImage =
           await File(imageFile.path).copy("${appDir.path}/${fileName}");
-      widget.pickedImage!(File(imageFile.path));
+      widget.pickedImage!(savedImage);
     }
   }
 
