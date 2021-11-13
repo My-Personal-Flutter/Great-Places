@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Great places</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -20,45 +22,28 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>EnableBackgroundLocationUpdates</key>
+	<true/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Needed for accessing gallery</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Needed for accessing camera</string>
+	<key>NSLocationAlwaysAndWhenInUsageDescription</key>
+	<string>Always And In Use Permission</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app needs access to location when open and in the background.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This app needs access to location when in the background.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app needs access to location when open.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Needed for accessing microphone</string>
-
-<!-- location -->
-  <key>EnableBackgroundLocationUpdates</key>
-  <true/>
-  <key>NSLocationWhenInUseUsageDescription</key>
-  <string>This app needs access to location when open.</string>
-  <key>NSLocationAlwaysUsageDescription</key>
-  <string>This app needs access to location when in the background.</string>
-  <key>NSLocationAlwaysAndWhenInUsageDescription</key>
-  <string>Always And In Use Permission</string>
-  <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-  <string>This app needs access to location when open and in the background.</string>
-  
-
-	<!-- <key>NSLocationWhenInUseUsageDescription</key>
-	<string>Needed for accessing location</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Needed for accessing location but depricated</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Needed for accessing location in background</string>
-	<key>UIBackgroundModes</key>
-	<string>location</string>
-	<key>EnableBackgroundLocationUpdates</key> 
-	<true/> -->
-
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Needed for accessing gallery</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-	<key>io.flutter.embedded_views_preview</key>
-	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -74,5 +59,7 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>io.flutter.embedded_views_preview</key>
+	<true/>
 </dict>
 </plist>

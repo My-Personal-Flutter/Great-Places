@@ -29,18 +29,18 @@ class PlaceDetailScreen extends StatelessWidget {
               width: double.infinity,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           Text(
             _place.location!.address!,
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 20,
               color: Colors.grey,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           TextButton(
@@ -55,7 +55,7 @@ class PlaceDetailScreen extends StatelessWidget {
                 ),
               );
             },
-            child: Text("View on Map"),
+            child: const Text("View on Map"),
           )
         ],
       ),
